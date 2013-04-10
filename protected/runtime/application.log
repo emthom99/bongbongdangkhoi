@@ -1,0 +1,32 @@
+2013/03/30 18:37:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewdetail".' in D:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('viewdetail')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('viewdetail')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('needToKnow/view...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=needToKnow/viewdetail&code=10
+---
+2013/03/30 19:00:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewdetail".' in D:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('viewdetail')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('viewdetail')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('needToKnow/view...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=needToKnow/viewdetail&code=10
+HTTP_REFERER=http://localhost/bongbongdangkhoi/src/index-test.php?XDEBUG_SESSION_START=netbeans-xdebug
+---
+2013/04/10 17:24:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewdetail".' in D:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('viewdetail')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('viewdetail')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('needToKnow/view...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=needToKnow/viewdetail&code=7
+HTTP_REFERER=http://127.0.0.1/bongbongdangkhoi/src/index-test.php?r=Goods/goodsDetail&id=2
+---
