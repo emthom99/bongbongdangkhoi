@@ -1,6 +1,7 @@
 <div id="a-goods-detail">
-    <div class="goods-image">
-        <a href=''>
+    <div class="goods-detail-image">
+        
+        <a class="goods-image-detail" href=''>
             <img src="<?php echo Yii::app()->request->baseUrl.'/images/'.$model->image_url?>" />
         </a>
         
@@ -12,12 +13,17 @@
     
     <div class="goods-info">
         <table>
-            <tr><td><img src="<?php echo Yii::app()->request->baseUrl;?>/images/kc_icon.gif" />THÔNG TIN SẢN PHẨM</td></tr>
-            <tr><td><img src="<?php echo Yii::app()->request->baseUrl;?>/images/vien-sp.gif" />Tên gọi<img src="<?php echo Yii::app()->request->baseUrl;?>/images/kc_line.gif" /></td><td><?php echo $model->name?></td></tr>
-            <tr><td><img src="<?php echo Yii::app()->request->baseUrl;?>/images/vien-sp.gif" />Mã hàng<img src="<?php echo Yii::app()->request->baseUrl;?>/images/kc_line.gif" /></td><td><?php echo $model->fake_code?></td></tr>
-            <tr><td><img src="<?php echo Yii::app()->request->baseUrl;?>/images/vien-sp.gif" />Giá<img src="<?php echo Yii::app()->request->baseUrl;?>/images/kc_line.gif" /></td><td><?php echo $model->price?></td></tr>
-            <tr><td><img src="<?php echo Yii::app()->request->baseUrl;?>/images/vien-sp.gif" />Sale Off<img src="<?php echo Yii::app()->request->baseUrl;?>/images/kc_line.gif" /></td><td><?php echo $model->sale_off_price?></td></tr>
-            <tr><td><img src="<?php echo Yii::app()->request->baseUrl;?>/images/vien-sp.gif" />Thông tin mô tả<img src="<?php echo Yii::app()->request->baseUrl;?>/images/kc_line.gif" /></td></tr>
+            <tr class="info-row"><td><img src="<?php echo Yii::app()->request->baseUrl;?>/images/kc_icon.gif" /></td><td>THÔNG TIN SẢN PHẨM</td></tr>
+        </table>
+        <table>
+            <tr class="info-row"><td class="goods-info-dot"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/vien-sp.gif" /></td><td class="goods-info-label">Tên gọi</td><td class="name-info"><?php echo $model->name?></td></tr>
+            <tr class="info-row"><td class="goods-info-dot"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/vien-sp.gif" /></td><td class="goods-info-label">Mã hàng</td><td class="fake-code-info"><?php echo $model->fake_code?></td></tr>
+            <tr class="info-row"><td class="goods-info-dot"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/vien-sp.gif" /></td><td class="goods-info-label">Giá</td><td class="price-info"><?php echo $model->price?></td></tr>
+            <tr class="info-row"><td class="goods-info-dot"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/vien-sp.gif" /></td><td class="goods-info-label">Sale Off</td><td class="sale-off-info"><?php echo $model->sale_off_price?></td></tr>
+        </table>
+        
+        <table>
+            <tr class="info-row"><td class="goods-info-dot"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/vien-sp.gif" /></td><td  class="label-description">Thông tin mô tả</td></tr>
         </table>
     </div>
 </div>

@@ -343,7 +343,7 @@ body {
 
 #content{
     width: 495px;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 .agoods{
@@ -433,3 +433,91 @@ body {
     margin: 20px 10px;
 }
 
+#a-goods-detail{
+    padding: 10px;
+    border: 1px solid gray;
+    overflow: auto;
+}
+
+.goods-detail-image{
+    width: 234px;
+    float: left;
+}
+
+.goods-image-detail img{
+    width: 234px;
+}
+
+.goods-image-zoom{
+    width: 100px;
+    height: 20px;
+    margin: 10px auto;
+}
+.goods-image-zoom a:hover {
+    font-family: Arial;
+    font-size: 12px;
+    color: #d8261c;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+.goods-image-zoom a {
+    font-family: Arial;
+    font-size: 12px;
+    color: #6d960c;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.goods-info-dot{
+    width: 28px;
+    text-align:center;
+    height: 23px;
+}
+
+.goods-info-label{
+    width: 42px;
+    font-size: 12px;
+    color: #171717;
+    font-family: Arial;
+}
+.goods-info table{
+    width: 240px;
+}
+
+.goods-info .name-info{
+    font-size: 12px;
+    color: #d51e5f;
+    font-family: Arial;
+    text-align: center;
+}
+
+.goods-info .fake-code-info{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 12px;
+    color: #171717;
+    padding-left: 15px;
+}
+
+.goods-info .price-info{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 12px;
+    color: #171717;
+    background-color: #faf5e4;
+    padding-left: 15px;
+}
+
+.goods-info .label-description{
+    font-weight: bold;
+    font-size: 12px;
+    color: #2190e0;
+    font-family: Arial;
+}
+
+.goods-info .info-row{
+    display: table;  
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: #e8e7ec;
+}
