@@ -45,7 +45,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'code',
+                array(
+                    'name' => 'url',
+                    'type' => 'raw',
+                    'value' => 'CHtml::image( Yii::app()->request->baseUrl."/images/".$data->url,"",array("width"=>"100px"))', 
+                ),
 		'filename',
 		'extension',
 		'create_user_id',

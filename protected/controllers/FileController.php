@@ -138,6 +138,8 @@ class FileController extends Controller
 		if(isset($_GET['File']))
 			$model->attributes=$_GET['File'];
 
+                $model->dbCriteria->order='code DESC';
+                
 		$this->render('admin',array(
 			'model'=>$model,
 		));
