@@ -30,3 +30,415 @@ Stack trace:
 REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=needToKnow/viewdetail&code=7
 HTTP_REFERER=http://127.0.0.1/bongbongdangkhoi/src/index-test.php?r=Goods/goodsDetail&id=2
 ---
+2013/04/11 16:32:45 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "D:\xampp\htdocs\bongbongdangkhoi\src\assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in D:\xampp\htdocs\yii\framework\web\CAssetManager.php:128
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CAssetManager.php(113): CAssetManager->setBasePath('D:\xampp\htdocs...')
+#1 D:\xampp\htdocs\yii\framework\web\CAssetManager.php(235): CAssetManager->getBasePath()
+#2 D:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(188): CAssetManager->publish('D:\xampp\htdocs...')
+#3 D:\xampp\htdocs\yii\framework\web\CBaseController.php(148): CListView->init()
+#4 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 D:\xampp\htdocs\bongbongdangkhoi\src\protected\views\goods\goodsdetail.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 D:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#7 D:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('goodsdetail', Array, true)
+#10 D:\xampp\htdocs\bongbongdangkhoi\src\protected\controllers\GoodsController.php(157): CController->render('goodsdetail', Array)
+#11 [internal function]: GoodsController->actionGoodsDetail('1')
+#12 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GoodsController), Array)
+#13 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GoodsController), Object(ReflectionMethod), Array)
+#14 D:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#21 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('goodsDetail')
+#23 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Goods/goodsDeta...')
+#24 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#26 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=Goods/goodsDetail&id=1
+HTTP_REFERER=http://127.0.0.1/bongbongdangkhoi/src/index-test.php
+---
+2013/04/13 09:38:46 [error] [exception.CException] exception 'CException' with message 'Property "Goods." is not defined.' in D:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('')
+#1 D:\xampp\htdocs\bongbongdangkhoi\src\protected\views\goods\goodsdetail.php(29): CActiveRecord->__get('')
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#3 D:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('goodsdetail', Array, true)
+#6 D:\xampp\htdocs\bongbongdangkhoi\src\protected\controllers\GoodsController.php(157): CController->render('goodsdetail', Array)
+#7 [internal function]: GoodsController->actionGoodsDetail('2')
+#8 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GoodsController), Array)
+#9 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GoodsController), Object(ReflectionMethod), Array)
+#10 D:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('goodsDetail')
+#19 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Goods/goodsDeta...')
+#20 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#22 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=Goods/goodsDetail&id=2
+---
+2013/04/13 10:58:08 [error] [php] include(CDangKhoiPager.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(147): import()
+#1 D:\xampp\htdocs\yii\framework\web\CBaseController.php(147): CWidgetFactory->createWidget()
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CListView->createWidget()
+#3 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(265): CListView->widget()
+#4 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(161): CListView->renderPager()
+#5 unknown(0): CListView->renderSection()
+#6 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(144): preg_replace_callback()
+#7 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(129): CListView->renderContent()
+#8 D:\xampp\htdocs\yii\framework\web\CBaseController.php(174): CListView->run()
+#9 D:\xampp\htdocs\bongbongdangkhoi\src\protected\views\goods\goodsdetail.php(50): GoodsController->widget()
+#10 D:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#11 D:\xampp\htdocs\yii\framework\web\CBaseController.php(96): GoodsController->renderInternal()
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(870): GoodsController->renderFile()
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(783): GoodsController->renderPartial()
+#14 D:\xampp\htdocs\bongbongdangkhoi\src\protected\controllers\GoodsController.php(164): GoodsController->render()
+#15 unknown(0): GoodsController->actionGoodsDetail()
+#16 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#17 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#18 D:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#19 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): GoodsController->runAction()
+#20 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#22 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): GoodsController->filterAccessControl()
+#23 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#24 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#25 D:\xampp\htdocs\yii\framework\web\CController.php(266): GoodsController->runActionWithFilters()
+#26 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): GoodsController->run()
+#27 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#28 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CWebApplication->run()
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=goods/goodsDetail&id=5
+2013/04/13 10:58:50 [error] [exception.CException] exception 'CException' with message 'Alias "zii.components.widgets.CDangKhoiPager" is invalid. Make sure it points to an existing PHP file and the file is readable.' in D:\xampp\htdocs\yii\framework\YiiBase.php:318
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(147): YiiBase::import('zii.components....', true)
+#1 D:\xampp\htdocs\yii\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(CListView), 'zii.components....', Array)
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.components....', Array)
+#3 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(265): CBaseController->widget('zii.components....', Array)
+#4 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(161): CBaseListView->renderPager()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{items}<div cla...')
+#7 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(129): CBaseListView->renderContent()
+#8 D:\xampp\htdocs\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#9 D:\xampp\htdocs\bongbongdangkhoi\src\protected\views\goods\goodsdetail.php(50): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 D:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#11 D:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('goodsdetail', Array, true)
+#14 D:\xampp\htdocs\bongbongdangkhoi\src\protected\controllers\GoodsController.php(164): CController->render('goodsdetail', Array)
+#15 [internal function]: GoodsController->actionGoodsDetail('5')
+#16 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GoodsController), Array)
+#17 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GoodsController), Object(ReflectionMethod), Array)
+#18 D:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#25 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('goodsDetail')
+#27 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('goods/goodsDeta...')
+#28 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#30 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=goods/goodsDetail&id=5
+---
+2013/04/13 10:58:58 [error] [exception.CException] exception 'CException' with message 'Alias "zii.components.widget.CDangKhoiPager" is invalid. Make sure it points to an existing PHP file and the file is readable.' in D:\xampp\htdocs\yii\framework\YiiBase.php:318
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(147): YiiBase::import('zii.components....', true)
+#1 D:\xampp\htdocs\yii\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(CListView), 'zii.components....', Array)
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.components....', Array)
+#3 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(265): CBaseController->widget('zii.components....', Array)
+#4 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(161): CBaseListView->renderPager()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{items}<div cla...')
+#7 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(129): CBaseListView->renderContent()
+#8 D:\xampp\htdocs\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#9 D:\xampp\htdocs\bongbongdangkhoi\src\protected\views\goods\goodsdetail.php(50): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 D:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#11 D:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('goodsdetail', Array, true)
+#14 D:\xampp\htdocs\bongbongdangkhoi\src\protected\controllers\GoodsController.php(164): CController->render('goodsdetail', Array)
+#15 [internal function]: GoodsController->actionGoodsDetail('5')
+#16 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GoodsController), Array)
+#17 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GoodsController), Object(ReflectionMethod), Array)
+#18 D:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#25 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('goodsDetail')
+#27 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('goods/goodsDeta...')
+#28 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#30 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=goods/goodsDetail&id=5
+---
+2013/04/13 11:01:02 [error] [exception.CException] exception 'CException' with message 'Alias "components.widget.CDangKhoiPager" is invalid. Make sure it points to an existing directory or file.' in D:\xampp\htdocs\yii\framework\YiiBase.php:343
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(147): YiiBase::import('components.widg...', true)
+#1 D:\xampp\htdocs\yii\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(CListView), 'components.widg...', Array)
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CBaseController->createWidget('components.widg...', Array)
+#3 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(265): CBaseController->widget('components.widg...', Array)
+#4 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(161): CBaseListView->renderPager()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{items}<div cla...')
+#7 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(129): CBaseListView->renderContent()
+#8 D:\xampp\htdocs\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#9 D:\xampp\htdocs\bongbongdangkhoi\src\protected\views\goods\goodsdetail.php(50): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 D:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#11 D:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('goodsdetail', Array, true)
+#14 D:\xampp\htdocs\bongbongdangkhoi\src\protected\controllers\GoodsController.php(164): CController->render('goodsdetail', Array)
+#15 [internal function]: GoodsController->actionGoodsDetail('5')
+#16 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GoodsController), Array)
+#17 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GoodsController), Object(ReflectionMethod), Array)
+#18 D:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#25 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('goodsDetail')
+#27 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('goods/goodsDeta...')
+#28 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#30 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=goods/goodsDetail&id=5
+---
+2013/04/13 11:01:45 [error] [exception.CException] exception 'CException' with message 'Alias "widgets.CDangKhoiPager" is invalid. Make sure it points to an existing directory or file.' in D:\xampp\htdocs\yii\framework\YiiBase.php:343
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(147): YiiBase::import('widgets.CDangKh...', true)
+#1 D:\xampp\htdocs\yii\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(CListView), 'widgets.CDangKh...', Array)
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CBaseController->createWidget('widgets.CDangKh...', Array)
+#3 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(265): CBaseController->widget('widgets.CDangKh...', Array)
+#4 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(161): CBaseListView->renderPager()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{items}<div cla...')
+#7 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(129): CBaseListView->renderContent()
+#8 D:\xampp\htdocs\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#9 D:\xampp\htdocs\bongbongdangkhoi\src\protected\views\goods\goodsdetail.php(50): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 D:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#11 D:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('goodsdetail', Array, true)
+#14 D:\xampp\htdocs\bongbongdangkhoi\src\protected\controllers\GoodsController.php(164): CController->render('goodsdetail', Array)
+#15 [internal function]: GoodsController->actionGoodsDetail('5')
+#16 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GoodsController), Array)
+#17 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GoodsController), Object(ReflectionMethod), Array)
+#18 D:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#25 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('goodsDetail')
+#27 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('goods/goodsDeta...')
+#28 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#30 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=goods/goodsDetail&id=5
+---
+2013/04/13 11:04:06 [error] [exception.CException] exception 'CException' with message 'Alias "application.components.CDangKhoiPager" is invalid. Make sure it points to an existing PHP file and the file is readable.' in D:\xampp\htdocs\yii\framework\YiiBase.php:318
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(147): YiiBase::import('application.com...', true)
+#1 D:\xampp\htdocs\yii\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(CListView), 'application.com...', Array)
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CBaseController->createWidget('application.com...', Array)
+#3 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(265): CBaseController->widget('application.com...', Array)
+#4 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(161): CBaseListView->renderPager()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{items}<div cla...')
+#7 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(129): CBaseListView->renderContent()
+#8 D:\xampp\htdocs\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#9 D:\xampp\htdocs\bongbongdangkhoi\src\protected\views\goods\goodsdetail.php(50): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 D:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#11 D:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('goodsdetail', Array, true)
+#14 D:\xampp\htdocs\bongbongdangkhoi\src\protected\controllers\GoodsController.php(164): CController->render('goodsdetail', Array)
+#15 [internal function]: GoodsController->actionGoodsDetail('5')
+#16 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GoodsController), Array)
+#17 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GoodsController), Object(ReflectionMethod), Array)
+#18 D:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#25 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('goodsDetail')
+#27 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('goods/goodsDeta...')
+#28 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#30 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=goods/goodsDetail&id=5
+---
+2013/04/13 18:04:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "goodType".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('goodType')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=goodType&XDEBUG_SESSION_START=netbeans-xdebug
+---
+2013/04/13 18:44:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('searchByGoodsTy...')
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Goods/searchByG...')
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=Goods/searchByGoodsType&searchType=Bong+B%C3%B3ng+Trang+Tr%C3%AD+Ti%E1%BB%87c+C%C6%B0%E1%BB%9Bi
+HTTP_REFERER=http://localhost/bongbongdangkhoi/src/index-test.php
+---
+2013/04/13 18:59:38 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php:106
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(182): CBaseListView->init()
+#1 D:\xampp\htdocs\yii\framework\web\CBaseController.php(148): CListView->init()
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 D:\xampp\htdocs\bongbongdangkhoi\src\protected\views\goods\goodsbytype.php(21): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 D:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#5 D:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('goodsbytype', Array, true)
+#8 D:\xampp\htdocs\bongbongdangkhoi\src\protected\controllers\GoodsController.php(192): CController->render('goodsbytype', Array)
+#9 [internal function]: GoodsController->actionSearchByGoodsType('Bong B??ng S??n...')
+#10 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GoodsController), Array)
+#11 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GoodsController), Object(ReflectionMethod), Array)
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#19 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('searchByGoodsTy...')
+#21 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Goods/searchByG...')
+#22 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#24 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=Goods/searchByGoodsType&searchType=Bong+B%C3%B3ng+S%C3%A2n+Kh%E1%BA%A5u+TC
+HTTP_REFERER=http://localhost/bongbongdangkhoi/src/index-test.php?r=Goods/searchByGoodsType&searchType=Bong+B%C3%B3ng+L%E1%BB%91i+%C4%90i
+---
+2013/04/13 19:09:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewdetail".' in D:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('viewdetail')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('viewdetail')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('needToKnow/view...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=needToKnow/viewdetail&code=5
+HTTP_REFERER=http://localhost/bongbongdangkhoi/src/index-test.php?r=site/index
+---
+2013/04/13 19:16:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('detail')
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('needToKnow/deta...')
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=needToKnow/detail&id=1
+HTTP_REFERER=http://localhost/bongbongdangkhoi/src/index-test.php?r=site/index
+---
+2013/04/13 19:50:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('list')
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('news/list')
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=news/list
+HTTP_REFERER=http://localhost/bongbongdangkhoi/src/index-test.php?r=site/index
+---
+2013/04/13 20:19:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "detail".' in D:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('detail')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('detail')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('news/detail')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=news/detail&id=1
+HTTP_REFERER=http://localhost/bongbongdangkhoi/src/index-test.php?r=news/list
+---
+2013/04/14 13:19:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('goodsDetail')
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('goods/goodsDeta...')
+#10 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=goods/goodsDetail&code=2
+HTTP_REFERER=http://127.0.0.1/bongbongdangkhoi/src/index-test.php?r=goods/goodsDetail&id=3
+---
+2013/04/14 13:20:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ducXDEBUG_SESSION_START=netbeans-xdebug".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('ducXDEBUG_SESSI...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=ducXDEBUG_SESSION_START=netbeans-xdebug
+---
+2013/04/14 13:21:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ducXDEBUG_SESSION_START=netbeans-xdebug".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('ducXDEBUG_SESSI...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\bongbongdangkhoi\src\index-test.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/bongbongdangkhoi/src/index-test.php?r=ducXDEBUG_SESSION_START=netbeans-xdebug
+---

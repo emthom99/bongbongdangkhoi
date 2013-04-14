@@ -27,6 +27,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'description'); ?>
+		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>250)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'content'); ?>
 		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
 	</div>

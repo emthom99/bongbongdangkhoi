@@ -70,8 +70,10 @@ class GoodsTypeController extends Controller
 		if(isset($_POST['GoodsType']))
 		{
 			$model->attributes=$_POST['GoodsType'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+			if($model->save()){
+                                $model->search_type=GoodsType::model()->findByPk($model->father_code)->search_type.'&'.$model->code.'&';
+				if($model->save()) $this->redirect(array('view','id'=>$model->code));
+                        }
 		}
 
 		$this->render('create',array(
@@ -94,8 +96,10 @@ class GoodsTypeController extends Controller
 		if(isset($_POST['GoodsType']))
 		{
 			$model->attributes=$_POST['GoodsType'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+                        if($model->save()){
+                                $model->search_type=GoodsType::model()->findByPk($model->father_code)->search_type.'&'.$model->code.'&';
+				if($model->save()) $this->redirect(array('view','id'=>$model->code));
+                        }
 		}
 
 		$this->render('update',array(
@@ -143,7 +147,7 @@ class GoodsTypeController extends Controller
 		));
 	}
 
-	/**
+        /**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded

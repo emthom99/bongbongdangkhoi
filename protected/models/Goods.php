@@ -12,6 +12,7 @@
  * @property string $description
  * @property string $image_url
  * @property string $type
+ * @property string $search_type
  * @property integer $is_promoted
  * @property integer $is_favorited
  * @property integer $is_highlight1
@@ -53,11 +54,12 @@ class Goods extends CBongBongActiveRecord
 			array('is_promoted, is_favorited, is_highlight1, is_highlight2', 'numerical', 'integerOnly'=>true),
 			array('fake_code', 'length', 'max'=>10),
 			array('name, price, sale_off_price, description, type', 'length', 'max'=>50),
+			array('search_type', 'length', 'max'=>250),
 			array('create_user_id, update_user_id', 'length', 'max'=>20),
 			array('image_url, create_time, update_time', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('code, fake_code, name, price, sale_off_price, description, image_url, type, is_promoted, is_favorited, is_highlight1, is_highlight2, create_user_id, create_time, update_user_id, update_time', 'safe', 'on'=>'search'),
+			array('code, fake_code, name, price, sale_off_price, description, image_url, type, search_type, is_promoted, is_favorited, is_highlight1, is_highlight2, create_user_id, create_time, update_user_id, update_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -86,6 +88,7 @@ class Goods extends CBongBongActiveRecord
 			'description' => 'Description',
 			'image_url' => 'Image Url',
 			'type' => 'Type',
+			'search_type' => 'Search Type',
 			'is_promoted' => 'Is Promoted',
 			'is_favorited' => 'Is Favorited',
 			'is_highlight1' => 'Is Highlight1',
@@ -116,6 +119,7 @@ class Goods extends CBongBongActiveRecord
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('image_url',$this->image_url,true);
 		$criteria->compare('type',$this->type,true);
+		$criteria->compare('search_type',$this->search_type,true);
 		$criteria->compare('is_promoted',$this->is_promoted);
 		$criteria->compare('is_favorited',$this->is_favorited);
 		$criteria->compare('is_highlight1',$this->is_highlight1);

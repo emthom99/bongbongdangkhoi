@@ -28,7 +28,7 @@ class GoodsController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','goodsDetail'),
+				'actions'=>array('index','view','goodsDetail','searchByGoodsType'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -70,6 +70,7 @@ class GoodsController extends Controller
 		if(isset($_POST['Goods']))
 		{
 			$model->attributes=$_POST['Goods'];
+                        $model->search_type=  GoodsType::model()->findByPk($model->type)->search_type;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->code));
 		}
@@ -94,6 +95,7 @@ class GoodsController extends Controller
 		if(isset($_POST['Goods']))
 		{
 			$model->attributes=$_POST['Goods'];
+                        $model->search_type=  GoodsType::model()->findByPk($model->type)->search_type;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->code));
 		}
@@ -150,12 +152,45 @@ class GoodsController extends Controller
 	{
             $this->layout="//layouts/haidang";
             $model=$this->loadModel($id);
-            $dataProvider=new CActiveDataProvider('Goods');
+            $dataProvider=new CActiveDataProvider(
+                    'Goods',
+                    array(   
+                        'pagination'=>array(
+                            'pageSize'=>36,
+                        ),
+                    )
+            );
             $this->render('goodsdetail',array(
 			'model'=>$model,
                         'dataProvider'=>$dataProvider,
             ));
         }
+        
+        
+
+        public  function actionSearchByGoodsType($searchType){
+            $this->layout="//layouts/haidang";
+            $code = ($model=GoodsType::model()->findByAttributes(array('name'=>$searchType)))==null?'duccui':$model->code;
+            
+            $dataProvider=new CActiveDataProvider(
+                'Goods',
+                array(  
+                    'criteria'=>array(
+                        'condition'=>'search_type LIKE :searchType',
+                        'params'=>array(':searchType'=>'%&'.$code.'&%'),
+                    ),
+                    'pagination'=>array(
+                        'pageSize'=>36,
+                    ),
+                )
+            );
+            
+            $this->render('goodsbytype',array(
+                'dataProvider'=>$dataProvider,
+                'searchType'=>$searchType,
+            ));
+        }
+        
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

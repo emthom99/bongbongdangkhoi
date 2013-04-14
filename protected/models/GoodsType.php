@@ -6,6 +6,8 @@
  * The followings are the available columns in table 'tbl_goods_type':
  * @property string $code
  * @property string $name
+ * @property string $father_code
+ * @property string $search_type
  * @property string $create_user_id
  * @property string $create_time
  * @property string $update_user_id
@@ -40,11 +42,12 @@ class GoodsType extends CBongBongActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'length', 'max'=>50),
-			array('create_user_id, update_user_id', 'length', 'max'=>20),
+			array('father_code, create_user_id, update_user_id', 'length', 'max'=>20),
+			array('search_type', 'length', 'max'=>250),
 			array('create_time, update_time', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('code, name, create_user_id, create_time, update_user_id, update_time', 'safe', 'on'=>'search'),
+			array('code, name, father_code, search_type, create_user_id, create_time, update_user_id, update_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,6 +70,8 @@ class GoodsType extends CBongBongActiveRecord
 		return array(
 			'code' => 'Code',
 			'name' => 'Name',
+			'father_code' => 'Father Code',
+			'search_type' => 'Search Type',
 			'create_user_id' => 'Create User',
 			'create_time' => 'Create Time',
 			'update_user_id' => 'Update User',
@@ -87,6 +92,8 @@ class GoodsType extends CBongBongActiveRecord
 
 		$criteria->compare('code',$this->code,true);
 		$criteria->compare('name',$this->name,true);
+		$criteria->compare('father_code',$this->father_code,true);
+		$criteria->compare('search_type',$this->search_type,true);
 		$criteria->compare('create_user_id',$this->create_user_id,true);
 		$criteria->compare('create_time',$this->create_time,true);
 		$criteria->compare('update_user_id',$this->update_user_id,true);

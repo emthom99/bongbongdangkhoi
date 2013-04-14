@@ -1,13 +1,13 @@
+<div class="a-goods-detail-top"><img class="corner-goods-detail" src="<?php echo Yii::app()->request->baseUrl;?>/images/kc1.gif"/><div class="padding-goods-detail">　</div><img class="corner-goods-detail" src="<?php echo Yii::app()->request->baseUrl;?>/images/kc2.gif"/></div>
 <div id="a-goods-detail">
     <div class="goods-detail-image">
-        
-        <a class="goods-image-detail" href=''>
+        <a class="goods-image-detail" href="#" onclick='window.open("<?php echo Yii::app()->request->baseUrl.'/images/'.$model->image_url?>","khunghinh","width=550,height=550,menubar=no,scrollbars=yes")'>
             <img src="<?php echo Yii::app()->request->baseUrl.'/images/'.$model->image_url?>" />
         </a>
         
         <div class="goods-image-zoom">
             <img src="<?php echo Yii::app()->request->baseUrl;?>/images/zoom.gif" />
-            <a href="">Xem ảnh lớn</a>
+            <a href="#" onclick='window.open("<?php echo Yii::app()->request->baseUrl.'/images/'.$model->image_url?>","khunghinh","width=550,height=550,menubar=no,scrollbars=yes")'>Xem ảnh lớn</a>
         </div>
     </div>
     
@@ -25,8 +25,12 @@
         <table>
             <tr class="info-row"><td class="goods-info-dot"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/vien-sp.gif" /></td><td  class="label-description">Thông tin mô tả</td></tr>
         </table>
+        <div class="description-info">
+            <?php echo $model->description;?>
+        </div>
     </div>
 </div>
+<div class="a-goods-detail-bottom"><img class="corner-goods-detail" src="<?php echo Yii::app()->request->baseUrl;?>/images/kc4.gif"/><div class="padding-goods-detail">　</div><img class="corner-goods-detail" src="<?php echo Yii::app()->request->baseUrl;?>/images/kc3.gif"/></div>
 
 <div class="list-goods">
     <script src="<?php echo Yii::app()->request->baseUrl;?>/js/wz_tooltip.js"></script>
@@ -38,6 +42,15 @@
         <?php $this->widget('zii.widgets.CListView', array(
             'dataProvider'=>$dataProvider,
             'itemView'=>'_goods',
+            'template'=>'{items}<div class="list-goods-pager">{pager}{summary}</div>',
+            'pager'=>array(
+                'class'=>'application.components.views.CDangKhoiPager',
+                'maxButtonCount'=>3,
+                'header'=>'Trang:',
+                'prevPageLabel'=>'« Trước',
+                'nextPageLabel'=>'Tiếp theo »',
+            ),
+            'summaryText'=>'Số sản phẩm từ {start}-{end} (trong tổng số {count} sản phẩm)',
         )); ?>
     </div>
     <script type="text/javascript">
@@ -59,8 +72,11 @@
 
         if (($(".agoods").size()%3)!=0)
                 html+='</tr>';
+                
+        if ($(".agoods").size()==36)
+            $('.list-goods-pager').css('display', 'block');
 
-        $(".goods-detail").html('<table>'+html+'</table>');
+        $(".goods-detail .items").html('<table>'+html+'</table>');
         
         $('.goods-detail .goods-image a').bind({
             mouseover: function(){

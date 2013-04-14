@@ -44,7 +44,8 @@ class SiteController extends Controller
 			if(Yii::app()->request->isAjaxRequest)
 				echo $error['message'];
 			else
-				$this->render('error', $error);
+				//$this->render('error', $error);
+                                $this->redirect(Yii::app()->user->returnUrl);
 		}
 	}
 

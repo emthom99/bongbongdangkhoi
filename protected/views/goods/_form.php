@@ -53,7 +53,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'type'); ?>
-		<?php echo $form->textField($model,'type',array('size'=>50,'maxlength'=>50)); ?>
+                <?php echo $form->dropDownList($model,'type',CHtml::listData(GoodsType::model()->findAll(),'code','name'));?>
 		<?php echo $form->error($model,'type'); ?>
 	</div>
 
@@ -79,30 +79,6 @@
 		<?php echo $form->labelEx($model,'is_highlight2'); ?>
 		<?php echo $form->textField($model,'is_highlight2'); ?>
 		<?php echo $form->error($model,'is_highlight2'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'create_user_id'); ?>
-		<?php echo $form->textField($model,'create_user_id',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'create_user_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'create_time'); ?>
-		<?php echo $form->textField($model,'create_time'); ?>
-		<?php echo $form->error($model,'create_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'update_user_id'); ?>
-		<?php echo $form->textField($model,'update_user_id',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'update_user_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'update_time'); ?>
-		<?php echo $form->textField($model,'update_time'); ?>
-		<?php echo $form->error($model,'update_time'); ?>
 	</div>
 
 	<div class="row buttons">

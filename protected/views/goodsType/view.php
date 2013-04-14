@@ -23,6 +23,8 @@ $this->menu=array(
 	'attributes'=>array(
 		'code',
 		'name',
+		'father_code',
+		'search_type',
 		'create_user_id',
 		'create_time',
 		'update_user_id',

@@ -7,6 +7,7 @@
  * @property string $code
  * @property string $title
  * @property string $image_url
+ * @property string $description
  * @property string $content
  * @property string $create_user_id
  * @property string $create_time
@@ -42,11 +43,12 @@ class News extends CBongBongActiveRecord
 		// will receive user inputs.
 		return array(
 			array('title', 'length', 'max'=>255),
+			array('description', 'length', 'max'=>250),
 			array('create_user_id, update_user_id', 'length', 'max'=>20),
 			array('image_url, content, create_time, update_time', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('code, title, image_url, content, create_user_id, create_time, update_user_id, update_time', 'safe', 'on'=>'search'),
+			array('code, title, image_url, description, content, create_user_id, create_time, update_user_id, update_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,6 +72,7 @@ class News extends CBongBongActiveRecord
 			'code' => 'Code',
 			'title' => 'Title',
 			'image_url' => 'Image Url',
+			'description' => 'Description',
 			'content' => 'Content',
 			'create_user_id' => 'Create User',
 			'create_time' => 'Create Time',
@@ -92,6 +95,7 @@ class News extends CBongBongActiveRecord
 		$criteria->compare('code',$this->code,true);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('image_url',$this->image_url,true);
+		$criteria->compare('description',$this->description,true);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('create_user_id',$this->create_user_id,true);
 		$criteria->compare('create_time',$this->create_time,true);

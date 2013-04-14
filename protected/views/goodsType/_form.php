@@ -22,27 +22,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'create_user_id'); ?>
-		<?php echo $form->textField($model,'create_user_id',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'create_user_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'create_time'); ?>
-		<?php echo $form->textField($model,'create_time'); ?>
-		<?php echo $form->error($model,'create_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'update_user_id'); ?>
-		<?php echo $form->textField($model,'update_user_id',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'update_user_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'update_time'); ?>
-		<?php echo $form->textField($model,'update_time'); ?>
-		<?php echo $form->error($model,'update_time'); ?>
+		<?php echo $form->labelEx($model,'father_code'); ?>
+		<?php echo $form->dropDownList($model,'father_code',CHtml::listData($model->isNewRecord?GoodsType::model()->findAll():GoodsType::model()->findAll("code <> $model->code"),'code','name'));?>
+		<?php echo $form->error($model,'father_code'); ?>
 	</div>
 
 	<div class="row buttons">

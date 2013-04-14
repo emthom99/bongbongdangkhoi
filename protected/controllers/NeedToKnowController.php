@@ -28,7 +28,7 @@ class NeedToKnowController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','detail'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -143,6 +143,14 @@ class NeedToKnowController extends Controller
 		));
 	}
 
+        public function actionDetail($id){
+            $this->layout="//layouts/haidang";
+            $model=$this->loadModel($id);
+            $this->render('detail',array(
+                'model'=>$model,
+            ));
+        }
+        
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

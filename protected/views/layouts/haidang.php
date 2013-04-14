@@ -67,9 +67,9 @@
             <div id="mainmenu">
 		<ul id="yw0">
                     <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">TRANG CHỦ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">GIỚI THIỆU</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">CHƯƠNG TRÌNH KHUYẾN MÃI</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">TIN TỨC</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>1));?>">GIỚI THIỆU</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>2));?>">CHƯƠNG TRÌNH KHUYẾN MÃI</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('news/list');?>">TIN TỨC</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
                     <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">KHÁCH HÀNG</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
                     <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">GÓP Ý</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
                     <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">BẢNG GIÁ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
@@ -82,13 +82,13 @@
                     <ul id="suckertree1">
                         <img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_left_top.gif"/>
                         <li>
-                           <a href="catalog.aspx?cat=01" class="subfolderstyle">Bong Bóng Trang Trí Tiệc Cưới</a>
+                           <a href="<?php echo $this->createUrl('Goods/searchByGoodsType',array('searchType'=>'Bong Bóng Trang Trí Tiệc Cưới'));?>" class="subfolderstyle">Bong Bóng Trang Trí Tiệc Cưới</a>
                            <ul style="left: 200px; visibility: visible; display: none;">
-                              <li><a href="list.aspx?cat=29/03/2011 07/40/53">Cổng Bong Bóng TC</a></li>
-                              <li><a href="list.aspx?cat=02/04/2011 01/25/55">Bàn Ký Tên</a></li>
-                              <li><a href="list.aspx?cat=02/04/2011 01/26/20">Bong Bóng Lối Đi</a></li>
-                              <li><a href="list.aspx?cat=02/04/2011 01/26/40">Bong Bóng Sân Khấu TC</a></li>
-                              <li><a href="list.aspx?cat=10/11/2011 08/13/28">Bong Bóng Trang Trí TC</a></li>
+                              <li><a href="<?php echo $this->createUrl('Goods/searchByGoodsType',array('searchType'=>'Cổng Bong Bóng TC'));?>">Cổng Bong Bóng TC</a></li>
+                              <li><a href="<?php echo $this->createUrl('Goods/searchByGoodsType',array('searchType'=>'Bàn Ký Tên'));?>">Bàn Ký Tên</a></li>
+                              <li><a href="<?php echo $this->createUrl('Goods/searchByGoodsType',array('searchType'=>'Bong Bóng Lối Đi'));?>">Bong Bóng Lối Đi</a></li>
+                              <li><a href="<?php echo $this->createUrl('Goods/searchByGoodsType',array('searchType'=>'Bong Bóng Sân Khấu TC'));?>">Bong Bóng Sân Khấu TC</a></li>
+                              <li><a href="<?php echo $this->createUrl('Goods/searchByGoodsType',array('searchType'=>'Bong Bóng Trang Trí TC'));?>">Bong Bóng Trang Trí TC</a></li>
                            </ul>
                         </li>
                         <li>
@@ -143,7 +143,7 @@
                                 );
 
                                 foreach ($goods as $aGoods) {?>
-                                    <a href="<?php echo $this->createUrl('/goods/viewdetail',array('code'=>$aGoods->code)) ?>">
+                                    <a href="<?php echo $this->createUrl('goods/goodsDetail',array('id'=>$aGoods->code)) ?>">
                                         <img src="<?php echo Yii::app()->request->baseUrl.'/images/'.$aGoods->image_url;?>" 
                                             alt="<?php echo $aGoods->name ?>"
                                             title="<?php echo $aGoods->name ?>"/>
@@ -165,7 +165,7 @@
                                 );
 
                                 foreach ($goods as $aGoods) {?>
-                                    <a href="<?php echo $this->createUrl('/goods/viewdetail',array('code'=>$aGoods->code)) ?>">
+                                    <a href="<?php echo $this->createUrl('goods/goodsDetail',array('id'=>$aGoods->code)) ?>">
                                         <img src="<?php echo Yii::app()->request->baseUrl.'/images/'.$aGoods->image_url;?>" 
                                             alt="<?php echo $aGoods->name ?>"
                                             title="<?php echo $aGoods->name ?>"/>
@@ -283,7 +283,7 @@
                             foreach ($needToKnows as $info) {?>
                                 <div class="a-need-to-know">
                                     <img src="<?php echo Yii::app()->request->baseUrl.'/images/icon_tin.gif';?>" />
-                                    <a href="<?php echo $this->createUrl('/needToKnow/viewdetail',array('code'=>$info->code)) ?>"><?php echo $info->title?></a>
+                                    <a href="<?php echo $this->createUrl('needToKnow/detail',array('id'=>$info->code)) ?>"><?php echo $info->title?></a>
                                 </div>
                                 <?php
                             }
@@ -303,7 +303,7 @@
                             foreach ($newss as $info) {?>
                                 <div class="a-news">
                                     <div class="news-images"><img src="<?php echo Yii::app()->request->baseUrl.'/images/'.$info->image_url;?>" /></div>
-                                    <a href="<?php echo $this->createUrl('/needToKnow/viewdetail',array('code'=>$info->code)) ?>"><?php echo $info->title?></a>
+                                    <a href="<?php echo $this->createUrl('news/detail',array('id'=>$info->code)) ?>"><?php echo $info->title?></a>
                                 </div>
                                 <?php
                             }
@@ -328,9 +328,9 @@
             <div id="mainmenu">
 		<ul id="yw0">
                     <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">TRANG CHỦ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">GIỚI THIỆU</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">CHƯƠNG TRÌNH KHUYẾN MÃI</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">TIN TỨC</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>1));?>">GIỚI THIỆU</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>2));?>">CHƯƠNG TRÌNH KHUYẾN MÃI</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('news/list');?>">TIN TỨC</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
                     <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">KHÁCH HÀNG</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
                     <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">GÓP Ý</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
                     <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">BẢNG GIÁ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>

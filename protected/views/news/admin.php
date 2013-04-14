@@ -48,10 +48,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'code',
 		'title',
 		'image_url',
+		'description',
 		'content',
 		'create_user_id',
-		'create_time',
 		/*
+		'create_time',
 		'update_user_id',
 		'update_time',
 		*/

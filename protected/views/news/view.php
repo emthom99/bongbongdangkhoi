@@ -24,6 +24,7 @@ $this->menu=array(
 		'code',
 		'title',
 		'image_url',
+		'description',
 		'content',
 		'create_user_id',
 		'create_time',
