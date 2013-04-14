@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Files'=>array('index'),
-	$model->title,
+	$model->code,
 );
 
 $this->menu=array(
@@ -22,8 +22,8 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'code',
-		'title',
-		'url',
+		'filename',
+		'extension',
 		'create_user_id',
 		'create_time',
 		'update_user_id',

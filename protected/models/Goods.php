@@ -24,7 +24,9 @@
  */
 class Goods extends CBongBongActiveRecord
 {
-	/**
+    public $image;
+
+    /**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
 	 * @return Goods the static model class
@@ -57,6 +59,7 @@ class Goods extends CBongBongActiveRecord
 			array('search_type', 'length', 'max'=>250),
 			array('create_user_id, update_user_id', 'length', 'max'=>20),
 			array('image_url, create_time, update_time', 'safe'),
+                        array('image', 'file', 'allowEmpty'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('code, fake_code, name, price, sale_off_price, description, image_url, type, search_type, is_promoted, is_favorited, is_highlight1, is_highlight2, create_user_id, create_time, update_user_id, update_time', 'safe', 'on'=>'search'),

@@ -70,8 +70,24 @@ class NewsController extends Controller
 		if(isset($_POST['News']))
 		{
 			$model->attributes=$_POST['News'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+                        
+			$model->image_url='file999_no_image.jpg';
+                        $uploadedFile=CUploadedFile::getInstance($model,'image');
+                        if($uploadedFile->size>0){
+                            $fileModel=new File;
+                            $fileModel->filename=$uploadedFile->name;
+                            $fileModel->extension=$uploadedFile->extensionName;
+                            $fileModel->save();
+                            $uploadedFile->saveAs(Yii::app()->basePath.'/../images/'.$fileModel->url);
+                            $model->image_url=$fileModel->url;
+                        }
+                        
+			if($model->save()){
+                            $this->redirect(array('view','id'=>$model->code));
+                        }
+                        else{
+                            $fileModel->delete();
+                        }
 		}
 
 		$this->render('create',array(
@@ -94,8 +110,23 @@ class NewsController extends Controller
 		if(isset($_POST['News']))
 		{
 			$model->attributes=$_POST['News'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+                        
+                        $uploadedFile=CUploadedFile::getInstance($model,'image');
+                        if($uploadedFile->size>0){
+                            $fileModel=new File;
+                            $fileModel->filename=$uploadedFile->name;
+                            $fileModel->extension=$uploadedFile->extensionName;
+                            $fileModel->save();
+                            $uploadedFile->saveAs(Yii::app()->basePath.'/../images/'.$fileModel->url);
+                            $model->image_url=$fileModel->url;
+                        }
+                        
+			if($model->save()){
+                            $this->redirect(array('view','id'=>$model->code));
+                        }
+                        else{
+                            $fileModel->delete();
+                        }
 		}
 
 		$this->render('update',array(
@@ -137,8 +168,10 @@ class NewsController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['News']))
 			$model->attributes=$_GET['News'];
-
-		$this->render('admin',array(
+                
+                $model->dbCriteria->order='code DESC';
+		
+                $this->render('admin',array(
 			'model'=>$model,
 		));
 	}
@@ -150,6 +183,9 @@ class NewsController extends Controller
                 array(   
                     'pagination'=>array(
                         'pageSize'=>17,
+                    ),
+                    'criteria'=>array(
+                        'order'=>'code DESC',
                     ),
                 )
             );

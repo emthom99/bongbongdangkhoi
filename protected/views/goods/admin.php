@@ -44,8 +44,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'id'=>'goods-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+        'ajaxUpdate'=>false,
 	'columns'=>array(
-		'code',
+                array(
+                    'name' => 'image_url',
+                    'type' => 'raw',
+                    'value' => 'CHtml::image( Yii::app()->request->baseUrl."/images/".$data->image_url,"",array("width"=>"100px"))', 
+                ),
 		'fake_code',
 		'name',
 		'price',

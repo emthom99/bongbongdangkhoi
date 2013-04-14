@@ -9,6 +9,9 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'goods-form',
 	'enableAjaxValidation'=>false,
+        'htmlOptions' => array(
+            'enctype' => 'multipart/form-data',
+        ),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -47,9 +50,15 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'image_url'); ?>
-		<?php echo $form->textArea($model,'image_url',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'image_url'); ?>
+                <?php echo CHtml::activeFileField($model, 'image'); ?>
+		<?php echo $form->error($model,'image'); ?>
 	</div>
+        
+        <?php if($model->isNewRecord==false) {?>
+            <div class="row">
+                 <?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/'.$model->image_url,"image",array("width"=>"200px")); ?>
+            </div>
+        <?php }?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'type'); ?>

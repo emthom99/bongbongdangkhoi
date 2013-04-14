@@ -5,8 +5,8 @@
  *
  * The followings are the available columns in table 'tbl_file':
  * @property string $code
- * @property string $title
- * @property string $url
+ * @property string $filename
+ * @property string $extension
  * @property string $create_user_id
  * @property string $create_time
  * @property string $update_user_id
@@ -14,7 +14,13 @@
  */
 class File extends CBongBongActiveRecord
 {
-	/**
+        private $url;
+        
+        public function getUrl(){
+            return 'file999_'.$this->code.'.'.$this->extension;
+        }
+
+        /**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
 	 * @return File the static model class
@@ -40,12 +46,13 @@ class File extends CBongBongActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title', 'length', 'max'=>255),
+			array('filename', 'length', 'max'=>255),
+			array('extension', 'length', 'max'=>50),
 			array('create_user_id, update_user_id', 'length', 'max'=>20),
-			array('url, create_time, update_time', 'safe'),
+			array('create_time, update_time', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('code, title, url, create_user_id, create_time, update_user_id, update_time', 'safe', 'on'=>'search'),
+			array('code, filename, extension, create_user_id, create_time, update_user_id, update_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,8 +74,8 @@ class File extends CBongBongActiveRecord
 	{
 		return array(
 			'code' => 'Code',
-			'title' => 'Title',
-			'url' => 'Url',
+			'filename' => 'Filename',
+			'extension' => 'Extension',
 			'create_user_id' => 'Create User',
 			'create_time' => 'Create Time',
 			'update_user_id' => 'Update User',
@@ -88,8 +95,8 @@ class File extends CBongBongActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('code',$this->code,true);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('url',$this->url,true);
+		$criteria->compare('filename',$this->filename,true);
+		$criteria->compare('extension',$this->extension,true);
 		$criteria->compare('create_user_id',$this->create_user_id,true);
 		$criteria->compare('create_time',$this->create_time,true);
 		$criteria->compare('update_user_id',$this->update_user_id,true);

@@ -9,12 +9,12 @@
 	<?php echo CHtml::link(CHtml::encode($data->code), array('view', 'id'=>$data->code)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>
-	<?php echo CHtml::encode($data->title); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('filename')); ?>:</b>
+	<?php echo CHtml::encode($data->filename); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('url')); ?>:</b>
-	<?php echo CHtml::encode($data->url); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('extension')); ?>:</b>
+	<?php echo CHtml::encode($data->extension); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('create_user_id')); ?>:</b>

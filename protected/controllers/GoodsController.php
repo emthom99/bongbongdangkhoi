@@ -71,8 +71,24 @@ class GoodsController extends Controller
 		{
 			$model->attributes=$_POST['Goods'];
                         $model->search_type=  GoodsType::model()->findByPk($model->type)->search_type;
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+                        
+                        $model->image_url='file999_no_image.jpg';
+                        $uploadedFile=CUploadedFile::getInstance($model,'image');
+                        if($uploadedFile->size>0){
+                            $fileModel=new File;
+                            $fileModel->filename=$uploadedFile->name;
+                            $fileModel->extension=$uploadedFile->extensionName;
+                            $fileModel->save();
+                            $uploadedFile->saveAs(Yii::app()->basePath.'/../images/'.$fileModel->url);
+                            $model->image_url=$fileModel->url;
+                        }
+                        
+			if($model->save()){
+                            $this->redirect(array('view','id'=>$model->code));
+                        }
+                        else{
+                            $fileModel->delete();
+                        }
 		}
 
 		$this->render('create',array(
@@ -96,8 +112,23 @@ class GoodsController extends Controller
 		{
 			$model->attributes=$_POST['Goods'];
                         $model->search_type=  GoodsType::model()->findByPk($model->type)->search_type;
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+                        
+                        $uploadedFile=CUploadedFile::getInstance($model,'image');
+                        if($uploadedFile->size>0){
+                            $fileModel=new File;
+                            $fileModel->filename=$uploadedFile->name;
+                            $fileModel->extension=$uploadedFile->extensionName;
+                            $fileModel->save();
+                            $uploadedFile->saveAs(Yii::app()->basePath.'/../images/'.$fileModel->url);
+                            $model->image_url=$fileModel->url;
+                        }
+                        
+			if($model->save()){
+                            $this->redirect(array('view','id'=>$model->code));
+                        }
+                        else{
+                            $fileModel->delete();
+                        }
 		}
 
 		$this->render('update',array(
@@ -140,6 +171,7 @@ class GoodsController extends Controller
 		if(isset($_GET['Goods']))
 			$model->attributes=$_GET['Goods'];
 
+                $model->dbCriteria->order='code DESC';
 		$this->render('admin',array(
 			'model'=>$model,
 		));
@@ -157,6 +189,10 @@ class GoodsController extends Controller
                     array(   
                         'pagination'=>array(
                             'pageSize'=>36,
+                        ),
+                        'criteria'=>array(
+                            'order'=>'code DESC',
+                            'condition'=>"code <> '$model->code'",
                         ),
                     )
             );
@@ -178,6 +214,7 @@ class GoodsController extends Controller
                     'criteria'=>array(
                         'condition'=>'search_type LIKE :searchType',
                         'params'=>array(':searchType'=>'%&'.$code.'&%'),
+                        'order'=>'code desc',
                     ),
                     'pagination'=>array(
                         'pageSize'=>36,
