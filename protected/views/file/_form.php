@@ -9,6 +9,9 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'file-form',
 	'enableAjaxValidation'=>false,
+        'htmlOptions' => array(
+            'enctype' => 'multipart/form-data',
+        ),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -27,32 +30,20 @@
 		<?php echo $form->error($model,'extension'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'create_user_id'); ?>
-		<?php echo $form->textField($model,'create_user_id',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'create_user_id'); ?>
+        <div class="row">
+		<?php echo $form->labelEx($model,'url'); ?>
+		<?php echo CHtml::activeFileField($model, 'image'); ?>
+		<?php echo $form->error($model,'image'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'create_time'); ?>
-		<?php echo $form->textField($model,'create_time'); ?>
-		<?php echo $form->error($model,'create_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'update_user_id'); ?>
-		<?php echo $form->textField($model,'update_user_id',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'update_user_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'update_time'); ?>
-		<?php echo $form->textField($model,'update_time'); ?>
-		<?php echo $form->error($model,'update_time'); ?>
-	</div>
-
+        
+        <?php if($model->isNewRecord==false) {?>
+            <div class="row">
+                 <?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/'.$model->url,"image",array("width"=>"200px")); ?>
+            </div>
+        <?php }?>
+        
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Tạo mới' : 'Cập nhật'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

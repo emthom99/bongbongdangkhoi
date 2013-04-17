@@ -3,19 +3,16 @@
 /* @var $model File */
 
 $this->breadcrumbs=array(
-	'Files'=>array('index'),
-	$model->code=>array('view','id'=>$model->code),
-	'Update',
+	'Files'=>array('admin'),
+	'Cập nhật',
 );
 
 $this->menu=array(
-	array('label'=>'List File', 'url'=>array('index')),
-	array('label'=>'Create File', 'url'=>array('create')),
-	array('label'=>'View File', 'url'=>array('view', 'id'=>$model->code)),
-	array('label'=>'Manage File', 'url'=>array('admin')),
+	array('label'=>'Tạo mới', 'url'=>array('create')),
+	array('label'=>'Quản lí', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update File <?php echo $model->code; ?></h1>
+<h1>Cập nhật File <?php echo $model->code; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

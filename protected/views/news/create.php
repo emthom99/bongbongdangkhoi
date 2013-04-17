@@ -3,16 +3,15 @@
 /* @var $model News */
 
 $this->breadcrumbs=array(
-	'News'=>array('index'),
-	'Create',
+	'Tin tức'=>array('admin'),
+	'Tạo mới',
 );
 
 $this->menu=array(
-	array('label'=>'List News', 'url'=>array('index')),
-	array('label'=>'Manage News', 'url'=>array('admin')),
+	array('label'=>'Quản lí', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create News</h1>
+<h1>Tạo mới Tin tức</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

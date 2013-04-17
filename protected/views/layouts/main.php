@@ -29,11 +29,11 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'GoodsType', 'url'=>array('goodsType/admin')),
-				array('label'=>'Goods', 'url'=>array('goods/admin')),
-				array('label'=>'Need To Know', 'url'=>array('needToKnow/admin')),
-				array('label'=>'News', 'url'=>array('news/admin')),
+				array('label'=>'Trang chủ', 'url'=>array('/site/index')),
+				array('label'=>'Loại sản phẩm', 'url'=>array('goodsType/admin')),
+				array('label'=>'Sản phẩm', 'url'=>array('goods/admin')),
+				array('label'=>'Thông tin cần biết', 'url'=>array('needToKnow/admin')),
+				array('label'=>'Tin tức', 'url'=>array('news/admin')),
 				array('label'=>'File', 'url'=>array('file/admin')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
@@ -51,9 +51,8 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> by Hoàng Minh Đức.<br/>
 		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 
 </div><!-- page -->

@@ -49,7 +49,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Tạo mới' : 'Cập nhật'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

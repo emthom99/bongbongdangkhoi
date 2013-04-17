@@ -3,16 +3,15 @@
 /* @var $model File */
 
 $this->breadcrumbs=array(
-	'Files'=>array('index'),
-	'Create',
+	'Files'=>array('admin'),
+	'Tạo mới',
 );
 
 $this->menu=array(
-	array('label'=>'List File', 'url'=>array('index')),
-	array('label'=>'Manage File', 'url'=>array('admin')),
+	array('label'=>'Quản lí', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create File</h1>
+<h1>Tạo File</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

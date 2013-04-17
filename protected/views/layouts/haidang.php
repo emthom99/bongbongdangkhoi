@@ -56,23 +56,23 @@
     <div class="container" id="page">
         <div id="header" class="header">
             <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="980" height="170">
-              <param name="movie" value="<?php echo Yii::app()->request->baseUrl;?>/images/top_banner.swf">
+              <param name="movie" value="<?php echo Yii::app()->request->baseUrl;?>/images/top_bannernew1.swf">
               <param name="quality" value="high">
                <param name="wmode" value="transparent">
-              <embed src="<?php echo Yii::app()->request->baseUrl;?>/images/top_banner.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="980" height="170" wmode="transparent">
+              <embed src="<?php echo Yii::app()->request->baseUrl;?>/images/top_bannernew1.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="980" height="170" wmode="transparent">
             </object>
         </div><!--header-->
         
         <div id="main-content">
             <div id="mainmenu">
 		<ul id="yw0">
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">TRANG CHỦ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>1));?>">GIỚI THIỆU</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>2));?>">CHƯƠNG TRÌNH KHUYẾN MÃI</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('news/list');?>">TIN TỨC</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">KHÁCH HÀNG</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">GÓP Ý</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">BẢNG GIÁ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">TRANG CHỦ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>1));?>">GIỚI THIỆU</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>2));?>">CHƯƠNG TRÌNH KHUYẾN MÃI</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('news/list');?>">TIN TỨC</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">KHÁCH HÀNG</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">GÓP Ý</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">BẢNG GIÁ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
                     <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">LIÊN HỆ</a></li>
                 </ul> 
             </div><!-- mainmenu -->
@@ -327,13 +327,13 @@
             <div style="clear: both"></div>
             <div id="mainmenu">
 		<ul id="yw0">
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">TRANG CHỦ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>1));?>">GIỚI THIỆU</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>2));?>">CHƯƠNG TRÌNH KHUYẾN MÃI</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('news/list');?>">TIN TỨC</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">KHÁCH HÀNG</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">GÓP Ý</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">BẢNG GIÁ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_line.gif"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">TRANG CHỦ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>1));?>">GIỚI THIỆU</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('needToKnow/detail',array('id'=>2));?>">CHƯƠNG TRÌNH KHUYẾN MÃI</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('news/list');?>">TIN TỨC</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">KHÁCH HÀNG</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">GÓP Ý</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">BẢNG GIÁ</a><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu_sep.png"/></li>
                     <li><a href="<?php echo Yii::app()->createUrl('site/index');?>">LIÊN HỆ</a></li>
                 </ul> 
             </div><!-- mainmenu -->

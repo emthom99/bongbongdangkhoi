@@ -69,9 +69,9 @@ class GoodsType extends CBongBongActiveRecord
 	{
 		return array(
 			'code' => 'Code',
-			'name' => 'Name',
-			'father_code' => 'Father Code',
-			'search_type' => 'Search Type',
+			'name' => 'Tên',
+			'father_code' => 'Tên cha',
+			'search_type' => 'search tag',
 			'create_user_id' => 'Create User',
 			'create_time' => 'Create Time',
 			'update_user_id' => 'Update User',

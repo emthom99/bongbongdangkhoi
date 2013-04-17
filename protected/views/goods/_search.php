@@ -48,7 +48,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'type'); ?>
-		<?php echo $form->textField($model,'type',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->dropDownList($model,'type',CHtml::listData(GoodsType::model()->findAll(),'code','name'));?>
 	</div>
 
 	<div class="row">
@@ -61,38 +61,8 @@
 		<?php echo $form->textField($model,'is_favorited'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'is_highlight1'); ?>
-		<?php echo $form->textField($model,'is_highlight1'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'is_highlight2'); ?>
-		<?php echo $form->textField($model,'is_highlight2'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'create_user_id'); ?>
-		<?php echo $form->textField($model,'create_user_id',array('size'=>20,'maxlength'=>20)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'create_time'); ?>
-		<?php echo $form->textField($model,'create_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'update_user_id'); ?>
-		<?php echo $form->textField($model,'update_user_id',array('size'=>20,'maxlength'=>20)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'update_time'); ?>
-		<?php echo $form->textField($model,'update_time'); ?>
-	</div>
-
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Tìm kiếm'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

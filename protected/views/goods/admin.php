@@ -3,13 +3,11 @@
 /* @var $model Goods */
 
 $this->breadcrumbs=array(
-	'Goods'=>array('index'),
-	'Manage',
+	'Quản lí',
 );
 
 $this->menu=array(
-	array('label'=>'List Goods', 'url'=>array('index')),
-	array('label'=>'Create Goods', 'url'=>array('create')),
+	array('label'=>'Tạo mới', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,14 +24,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Goods</h1>
+<h1>Quản lí Sản phẩm</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Tìm kiếm nâng cao','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -45,6 +38,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
         'ajaxUpdate'=>false,
+        'summaryText'=>'Số sản phẩm từ {start}-{end} (trong tổng số {count} sản phẩm)',
+        'template'=>'{summary}{items}{pager}',
+        'pager'=>array(
+                'header'=>'',
+                'prevPageLabel'=>'« Trước',
+                'nextPageLabel'=>'Tiếp theo »',
+        ),
 	'columns'=>array(
                 array(
                     'name' => 'image_url',
@@ -56,18 +56,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'price',
 		'sale_off_price',
 		'description',
-		/*
-		'image_url',
-		'type',
 		'is_promoted',
 		'is_favorited',
-		'is_highlight1',
-		'is_highlight2',
-		'create_user_id',
-		'create_time',
-		'update_user_id',
-		'update_time',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

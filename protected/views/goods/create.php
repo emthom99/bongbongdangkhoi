@@ -3,16 +3,15 @@
 /* @var $model Goods */
 
 $this->breadcrumbs=array(
-	'Goods'=>array('index'),
-	'Create',
+	'Sản phẩm'=>array('admin'),
+	'Tạo mới',
 );
 
 $this->menu=array(
-	array('label'=>'List Goods', 'url'=>array('index')),
-	array('label'=>'Manage Goods', 'url'=>array('admin')),
+	array('label'=>'Quản lí', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Goods</h1>
+<h1>Tạo Sản phẩm</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -15,6 +15,7 @@
 class File extends CBongBongActiveRecord
 {
         private $url;
+        public $image;
         
         public function getUrl(){
             return 'file999_'.$this->code.'.'.$this->extension;
@@ -50,6 +51,7 @@ class File extends CBongBongActiveRecord
 			array('extension', 'length', 'max'=>50),
 			array('create_user_id, update_user_id', 'length', 'max'=>20),
 			array('create_time, update_time', 'safe'),
+                        array('image', 'file', 'allowEmpty'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('code, filename, extension, create_user_id, create_time, update_user_id, update_time', 'safe', 'on'=>'search'),
@@ -74,8 +76,9 @@ class File extends CBongBongActiveRecord
 	{
 		return array(
 			'code' => 'Code',
-			'filename' => 'Filename',
-			'extension' => 'Extension',
+			'filename' => 'Tên file',
+			'extension' => 'Mở rộng',
+                        'url'=>'Hình đại diện',
 			'create_user_id' => 'Create User',
 			'create_time' => 'Create Time',
 			'update_user_id' => 'Update User',

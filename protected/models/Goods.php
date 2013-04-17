@@ -62,7 +62,7 @@ class Goods extends CBongBongActiveRecord
                         array('image', 'file', 'allowEmpty'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('code, fake_code, name, price, sale_off_price, description, image_url, type, search_type, is_promoted, is_favorited, is_highlight1, is_highlight2, create_user_id, create_time, update_user_id, update_time', 'safe', 'on'=>'search'),
+			array('fake_code, name, price, sale_off_price, description, image_url, type, search_type, is_promoted, is_favorited', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -84,16 +84,16 @@ class Goods extends CBongBongActiveRecord
 	{
 		return array(
 			'code' => 'Code',
-			'fake_code' => 'Fake Code',
-			'name' => 'Name',
-			'price' => 'Price',
-			'sale_off_price' => 'Sale Off Price',
-			'description' => 'Description',
-			'image_url' => 'Image Url',
-			'type' => 'Type',
-			'search_type' => 'Search Type',
-			'is_promoted' => 'Is Promoted',
-			'is_favorited' => 'Is Favorited',
+			'fake_code' => 'Mã',
+			'name' => 'Tên',
+			'price' => 'Giá',
+			'sale_off_price' => 'Giá Sale Off',
+			'description' => 'Mô tả',
+			'image_url' => 'File hình',
+			'type' => 'Loại',
+			'search_type' => 'search tag',
+			'is_promoted' => 'Khuyến mãi',
+			'is_favorited' => 'Yêu thích',
 			'is_highlight1' => 'Is Highlight1',
 			'is_highlight2' => 'Is Highlight2',
 			'create_user_id' => 'Create User',
@@ -125,12 +125,6 @@ class Goods extends CBongBongActiveRecord
 		$criteria->compare('search_type',$this->search_type,true);
 		$criteria->compare('is_promoted',$this->is_promoted);
 		$criteria->compare('is_favorited',$this->is_favorited);
-		$criteria->compare('is_highlight1',$this->is_highlight1);
-		$criteria->compare('is_highlight2',$this->is_highlight2);
-		$criteria->compare('create_user_id',$this->create_user_id,true);
-		$criteria->compare('create_time',$this->create_time,true);
-		$criteria->compare('update_user_id',$this->update_user_id,true);
-		$criteria->compare('update_time',$this->update_time,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

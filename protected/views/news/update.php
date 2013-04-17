@@ -3,19 +3,16 @@
 /* @var $model News */
 
 $this->breadcrumbs=array(
-	'News'=>array('index'),
-	$model->title=>array('view','id'=>$model->code),
-	'Update',
+	'Tin tức'=>array('admin'),
+	'Cập nhật',
 );
 
 $this->menu=array(
-	array('label'=>'List News', 'url'=>array('index')),
-	array('label'=>'Create News', 'url'=>array('create')),
-	array('label'=>'View News', 'url'=>array('view', 'id'=>$model->code)),
-	array('label'=>'Manage News', 'url'=>array('admin')),
+	array('label'=>'Tạo mới', 'url'=>array('create')),
+	array('label'=>'Quản lí', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update News <?php echo $model->code; ?></h1>
+<h1>Cập nhật Tin tức <?php echo $model->code; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

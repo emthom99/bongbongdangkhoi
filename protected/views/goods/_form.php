@@ -78,20 +78,8 @@
 		<?php echo $form->error($model,'is_favorited'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'is_highlight1'); ?>
-		<?php echo $form->textField($model,'is_highlight1'); ?>
-		<?php echo $form->error($model,'is_highlight1'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'is_highlight2'); ?>
-		<?php echo $form->textField($model,'is_highlight2'); ?>
-		<?php echo $form->error($model,'is_highlight2'); ?>
-	</div>
-
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Tạo mới' : 'Cập nhật'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

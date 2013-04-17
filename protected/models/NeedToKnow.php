@@ -67,8 +67,8 @@ class NeedToKnow extends CBongBongActiveRecord
 	{
 		return array(
 			'code' => 'Code',
-			'title' => 'Title',
-			'content' => 'Content',
+			'title' => 'Tiêu đề',
+			'content' => 'Nội dung',
 			'create_user_id' => 'Create User',
 			'create_time' => 'Create Time',
 			'update_user_id' => 'Update User',

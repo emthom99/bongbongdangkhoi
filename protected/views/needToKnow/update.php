@@ -3,19 +3,16 @@
 /* @var $model NeedToKnow */
 
 $this->breadcrumbs=array(
-	'Need To Knows'=>array('index'),
-	$model->title=>array('view','id'=>$model->code),
-	'Update',
+	'Thông tin cần biết'=>array('admin'),
+	'Cập nhật',
 );
 
 $this->menu=array(
-	array('label'=>'List NeedToKnow', 'url'=>array('index')),
-	array('label'=>'Create NeedToKnow', 'url'=>array('create')),
-	array('label'=>'View NeedToKnow', 'url'=>array('view', 'id'=>$model->code)),
-	array('label'=>'Manage NeedToKnow', 'url'=>array('admin')),
+	array('label'=>'Tạo mới', 'url'=>array('create')),
+	array('label'=>'Quản lí', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update NeedToKnow <?php echo $model->code; ?></h1>
+<h1>Cập nhật Thông tin cần biết <?php echo $model->code; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

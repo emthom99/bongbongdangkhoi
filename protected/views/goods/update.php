@@ -3,19 +3,16 @@
 /* @var $model Goods */
 
 $this->breadcrumbs=array(
-	'Goods'=>array('index'),
-	$model->name=>array('view','id'=>$model->code),
-	'Update',
+	'Sản phẩm'=>array('admin'),
+	'Cập nhật',
 );
 
 $this->menu=array(
-	array('label'=>'List Goods', 'url'=>array('index')),
-	array('label'=>'Create Goods', 'url'=>array('create')),
-	array('label'=>'View Goods', 'url'=>array('view', 'id'=>$model->code)),
-	array('label'=>'Manage Goods', 'url'=>array('admin')),
+	array('label'=>'Tạo mới', 'url'=>array('create')),
+	array('label'=>'Quản lí', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Goods <?php echo $model->code; ?></h1>
+<h1>Cập nhật Sản phẩm <?php echo $model->code; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

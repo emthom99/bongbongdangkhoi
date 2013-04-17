@@ -70,8 +70,16 @@ class FileController extends Controller
 		if(isset($_POST['File']))
 		{
 			$model->attributes=$_POST['File'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+                        
+                        $uploadedFile=CUploadedFile::getInstance($model,'image');
+                        if($uploadedFile->size>0){
+                            $model->filename=$uploadedFile->name;
+                            $model->extension=$uploadedFile->extensionName;
+                        }
+			if($model->save()){
+                                if($uploadedFile->size>0) $uploadedFile->saveAs(Yii::app()->basePath.'/../images/'.$model->url);
+				$this->redirect(array('admin'));
+                        }
 		}
 
 		$this->render('create',array(
@@ -94,8 +102,15 @@ class FileController extends Controller
 		if(isset($_POST['File']))
 		{
 			$model->attributes=$_POST['File'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+                        $uploadedFile=CUploadedFile::getInstance($model,'image');
+                        if($uploadedFile->size>0){
+                            $model->filename=$uploadedFile->name;
+                            $model->extension=$uploadedFile->extensionName;
+                        }
+			if($model->save()){
+                                if($uploadedFile->size>0) $uploadedFile->saveAs(Yii::app()->basePath.'/../images/'.$model->url);
+				$this->redirect(array('admin'));
+                        }
 		}
 
 		$this->render('update',array(

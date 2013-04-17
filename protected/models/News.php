@@ -73,10 +73,10 @@ class News extends CBongBongActiveRecord
 	{
 		return array(
 			'code' => 'Code',
-			'title' => 'Title',
-			'image_url' => 'Image Url',
-			'description' => 'Description',
-			'content' => 'Content',
+			'title' => 'Tiêu đề',
+			'image_url' => 'File hình',
+			'description' => 'Mô tả',
+			'content' => 'Nội dung',
 			'create_user_id' => 'Create User',
 			'create_time' => 'Create Time',
 			'update_user_id' => 'Update User',
